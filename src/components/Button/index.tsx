@@ -7,7 +7,7 @@ type ButtonProps = TouchableOpacityProps & {text: string};
 
 const Button = styled.TouchableOpacity`
   width: 100%;
-  max-width: 335px;
+  max-width: 245px;
   background-color: linear-gradient(91.43deg, #0427f0 -2.6%, #844ff5 109.21%);
 `;
 
@@ -16,7 +16,7 @@ const LinearStyled = styled(LinearGradient)`
   align-items: center;
   align-content: center;
   justify-content: center;
-  padding: 20px 36px;
+  padding: 16px 36px;
   border-radius: 8px;
   //overflow: hidden;
 `;

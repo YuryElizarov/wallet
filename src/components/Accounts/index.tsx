@@ -8,7 +8,6 @@ const Wrapper = styled.View`
   padding: 20px;
   margin-top: 10px;
   width: 100%;
-  flex: 1;
 `;
 
 const Header = styled.View`
@@ -68,18 +67,19 @@ const CheckInput = styled.Pressable`
   border-radius: 4px;
 `;
 
-const ListScroll = styled.ScrollView`
-  width: 100%;
-  margin-top: 30px;
-  flex: 1;
-`;
-const List = styled.SafeAreaView`
+// const ListScroll = styled.ScrollView`
+//   width: 100%;
+//   margin-top: 30px;
+//   flex: 1;
+// `;
+const List = styled.View`
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: flex-start;
   width: 100%;
   gap: 30px;
+  margin-top: 30px;
 `;
 
 function Index() {
@@ -108,13 +108,13 @@ function Index() {
           </CheckInput>
         </CheckboxBlock>
       </Header>
-      <ListScroll>
-        <List>
-          {list.map((account, id) => (
-            <Account key={`Account-${id}`} {...account} />
-          ))}
-        </List>
-      </ListScroll>
+      {/*<ListScroll>*/}
+      <List>
+        {list.map((account, id) => (
+          <Account key={`Account-${id}`} {...account} />
+        ))}
+      </List>
+      {/*</ListScroll>*/}
     </Wrapper>
   );
 }
